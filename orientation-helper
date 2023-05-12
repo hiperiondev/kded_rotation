@@ -8,6 +8,11 @@ GENERIC=""
 WACOM_PROP="Wacom Rotation"
 WACOM=""
 
+P4="normal"
+P3="bottom-up"
+P1="left-up"
+P2="right-up"
+
 function usage {
   echo "KDED Orientation Helper Arguments"
   echo "-o | --output : A display name like eDP-1 (primary display is used by default)"
@@ -37,19 +42,19 @@ if [ -z "$ROTATION" ]; then
   usage
 fi
 
-if [ "$ROTATION" == "normal" ]; then
+if [ "$ROTATION" == $P1 ]; then
   xrandr --output $PRIMARY_DISPLAY --rotate normal
   GENERIC="1 0 0 0 1 0 0 0 1"
   WACOM="0"
-elif [ "$ROTATION" == "bottom-up" ]; then
+elif [ "$ROTATION" == $P2 ]; then
   xrandr --output $PRIMARY_DISPLAY --rotate inverted
   GENERIC="-1 0 1 0 -1 1 0 0 1"
   WACOM="3"
-elif [ "$ROTATION" == "left-up" ]; then
+elif [ "$ROTATION" == $P3 ]; then
   xrandr --output $PRIMARY_DISPLAY --rotate left
   GENERIC="0 -1 1 1 0 0 0 0 1"
   WACOM="2"
-elif [ "$ROTATION" == "right-up" ]; then
+elif [ "$ROTATION" == $P4 ]; then
   xrandr --output $PRIMARY_DISPLAY --rotate right
   GENERIC="0 1 0 -1 0 1 0 0 1"
   WACOM="1"

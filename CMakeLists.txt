@@ -1,6 +1,6 @@
+cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
 project(kded_rotation)
 
-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 set(QT_MIN_VERSION "5.7.0")
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)

@@ -23,7 +23,7 @@ ScreenRotator::ScreenRotator(QObject *parent, const QVariantList &) :
 
 void ScreenRotator::startProgress() {
 	if (progress == -1) {
-		timer.start(25);
+		timer.start(3);
 		progress = 0;
 	}
 }
