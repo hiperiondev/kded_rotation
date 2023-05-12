@@ -4,9 +4,10 @@ KDED module for handling automatic screen rotation on X11, with visual feedback 
 
 # Installation
 Install dependences:
-On Fedora:
+- On Fedora:
+```
 dnf -y install qt5-qtbase-devel cmake extra-cmake-modules iio-sensor-proxy xrandr qt5-qtsensors kf5-kded-devel xinput qt5-qtsensors-devel qt5-qtbase-devel kf5-kcoreaddons-devel kf5-kdbusaddons-devel kf5-kded-devel
-
+```
 Run `./install_kded_rotation.sh`. 
 
 # Usage
